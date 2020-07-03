@@ -1,0 +1,45 @@
+<mvc:View controllerName="reassign.reassignUI.controller.ReassignView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<Table id="taskTable" inset="false" mode="SingleSelectMaster" items="{ path: '/result' }">
+							<columns>
+								<Column>
+									<Text text="Task / Status"/>
+								</Column>
+								<Column>
+									<Text text="Processor"/>
+								</Column>
+																<Column>
+									<Text text="Subject"/>
+								</Column>
+								<Column>
+									<Text text="Description"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<ObjectIdentifier title="{activityId}" text="{status}"/>
+										<Text text="{processor}"/>
+										<Text text="{subject}"/>
+										<Text text="{description}"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+						<Input id="processorInput"/>
+					</content>
+					<footer>
+						<OverflowToolbar>
+							<ToolbarSpacer/>
+							<Button text="Reassign Workflow" press="onPress"/>
+						</OverflowToolbar>
+					</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

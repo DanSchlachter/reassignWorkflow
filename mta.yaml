@@ -1,0 +1,31 @@
+ID: reassignWorkflow
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: reassignUI
+   type: html5
+   path: reassignUI
+   parameters:
+      disk-quota: 512M
+      memory: 256M
+   build-parameters:
+      builder: grunt
+   requires:
+    - name: uaa_reassignWorkflow
+    - name: dest_reassignWorkflow
+
+resources:
+ - name: uaa_reassignWorkflow
+   parameters:
+      path: ./xs-security.json
+      service-plan: application
+      service: xsuaa
+   type: org.cloudfoundry.managed-service
+
+ - name: dest_reassignWorkflow
+   parameters:
+      service-plan: lite
+      service: destination
+   type: org.cloudfoundry.managed-service
+
