@@ -37,6 +37,8 @@ Content of config.json:
     "authorities": [
         "TASK_COMPLETE",
         "TASK_UPDATE",
-        "TASK_GET"
+        "TASK_GET",
+        "WORKFLOW_INSTANCE_START",
+        "WORKFLOW_INSTANCE_GET"
     ]
 }
