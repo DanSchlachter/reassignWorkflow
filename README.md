@@ -13,7 +13,6 @@ App can be cloned, built and deployed to CF spaces.
 
 Possible improvements
  - Read new processor from Successfactors or other data source, no manual input
- - Automatically refresh UI after reassigning processor
  - etc
 ____________
 Prerequisites:
