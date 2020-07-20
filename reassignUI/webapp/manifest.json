@@ -14,13 +14,6 @@
 			"version": "0.0.0"
 		},
 		"dataSources": {
-			"Northwind.svc": {
-				"uri": "/V2/Northwind/Northwind.svc/V2/Northwind/Northwind.svc/",
-				"type": "OData",
-				"settings": {
-					"localUri": "localService/metadata.xml"
-				}
-			}
 		}
 	},
 	"sap.ui": {
@@ -65,16 +58,6 @@
 				"settings": {
 					"bundleName": "reassign.reassignUI.i18n.i18n"
 				}
-			},
-			"": {
-				"type": "sap.ui.model.odata.v2.ODataModel",
-				"settings": {
-					"defaultOperationMode": "Server",
-					"defaultBindingMode": "OneWay",
-					"defaultCountMode": "Request"
-				},
-				"dataSource": "Northwind.svc",
-				"preload": true
 			}
 		},
 		"resources": {
